@@ -2,12 +2,12 @@ version: '3'
 services:
   apache:
     build: .docker/apache
-    container_name: beth_apache
+    container_name: babi_apache
     ports:
       - 80:80
     volumes:
       - .docker/config/vhosts:/etc/apache2/sites-enabled
-      - .:/home/wwwroot/beth
+      - .:/home/wwwroot/babi
       - .docker/logs/apache:/var/log/apache2/
     depends_on:
       - php
@@ -15,20 +15,20 @@ services:
   mysql:
     image: mysql
     command: "--default-authentication-plugin=mysql_native_password"
-    container_name: beth_mysql
+    container_name: babi_mysql
     volumes:
       - .docker/data/db:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: x5c2bgwj
-      MYSQL_DATABASE: beth
-      MYSQL_USER: beth
+      MYSQL_DATABASE: babi
+      MYSQL_USER: babi
       MYSQL_PASSWORD: x5c2bgwj
     ports:
       - 33061:3306
   php:
     build: .docker/php
-    container_name: beth_php
+    container_name: babi_php
     volumes:
-      - .:/home/wwwroot/beth
+      - .:/home/wwwroot/babi
     depends_on:
       - mysql
