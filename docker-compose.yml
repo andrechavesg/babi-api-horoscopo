@@ -1,0 +1,34 @@
+version: '3'
+services:
+  apache:
+    build: .docker/apache
+    container_name: beth_apache
+    ports:
+      - 80:80
+    volumes:
+      - .docker/config/vhosts:/etc/apache2/sites-enabled
+      - .:/home/wwwroot/beth
+      - .docker/logs/apache:/var/log/apache2/
+    depends_on:
+      - php
+
+  mysql:
+    image: mysql
+    command: "--default-authentication-plugin=mysql_native_password"
+    container_name: beth_mysql
+    volumes:
+      - .docker/data/db:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: x5c2bgwj
+      MYSQL_DATABASE: beth
+      MYSQL_USER: beth
+      MYSQL_PASSWORD: x5c2bgwj
+    ports:
+      - 33061:3306
+  php:
+    build: .docker/php
+    container_name: beth_php
+    volumes:
+      - .:/home/wwwroot/beth
+    depends_on:
+      - mysql
