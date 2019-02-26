@@ -3,7 +3,7 @@
 
 A babi é sua API para realizar consultas do seu horóscopo diário e semanal de forma simples. 
 
-## Getting Started
+## Como usar
 
 Você pode realizar consultas através do nome do signo através da seguinte URL:
 
