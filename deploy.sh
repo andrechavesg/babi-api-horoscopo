@@ -3,9 +3,9 @@ git pull origin master
 docker-compose down
 docker-compose build
 docker-compose up -d
-docker exec -w /home/wwwroot/ataba ataba_php composer install
-docker exec ataba_php php /home/wwwroot/ataba/bin/console doctrine:migration:migrate
-docker exec ataba_php php /home/wwwroot/ataba/bin/console cache:clear
-docker exec ataba_php php /home/wwwroot/ataba/bin/console cache:clear --env=prod
-docker exec ataba_php php /home/wwwroot/ataba/bin/console cache:warmup
-docker exec ataba_php php /home/wwwroot/ataba/bin/console cache:warmup --env=prod
+docker exec -w /home/wwwroot/babi babi_php composer install
+docker exec babi_php php /home/wwwroot/babi/bin/console doctrine:migration:migrate
+docker exec babi_php php /home/wwwroot/babi/bin/console cache:clear
+docker exec babi_php php /home/wwwroot/babi/bin/console cache:clear --env=prod
+docker exec babi_php php /home/wwwroot/babi/bin/console cache:warmup
+docker exec babi_php php /home/wwwroot/babi/bin/console cache:warmup --env=prod
