@@ -1,4 +1,3 @@
-# Babi
 ![alt text](./public/babi.png)
 
 A babi é sua API para realizar consultas do seu horóscopo diário e semanal de forma simples. 
