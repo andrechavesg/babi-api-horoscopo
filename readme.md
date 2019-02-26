@@ -47,7 +47,6 @@ A data pode ser passada nos formatos:
 dd-mm-AAAA
 AAAA-mm-dd
 AAAAmmdd
-ddmmAAA
 timestamp
 ```
 Exemplo de retorno:
@@ -64,6 +63,7 @@ Exemplo de retorno:
     }
 }
 ```
+[![run in postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/c54d50fe4db5ac0ebad1)
 ## Quer ajudar?
 
 Para subir um servidor para desenvolvimento, basta executar os comandos:
