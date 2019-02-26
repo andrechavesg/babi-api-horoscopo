@@ -71,6 +71,7 @@ Para subir um servidor para desenvolvimento, basta executar os comandos:
 docker-compose build
 docker-compose up -d
 ```
+Na pasta raiz do projeto
 
 ## License
 
