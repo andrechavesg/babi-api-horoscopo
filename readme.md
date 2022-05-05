@@ -9,11 +9,11 @@ Você pode realizar consultas através do nome do signo através da seguinte URL
 ```
 ### GET Horóscopo diário pelo signo
 
-babi.hefesto.io/signo/{signo}/dia
+localhost/signo/{signo}/dia
 
 ### GET Horóscopo semanal pelo signo
 
-babi.hefesto.io/signo/{signo}/semana
+localhost/signo/{signo}/semana
 ```
 Lista de signos disponíveis:
 ```
@@ -35,11 +35,11 @@ Para realizar consultas pela data de nascimento, utilize a segunte URL:
 
 ### GET Horóscopo diário pela data de nascimento
 
-babi.hefesto.io/{dataDeNascimento}/dia
+localhost/{dataDeNascimento}/dia
 
 ### GET Horóscopo semanal pelo signo
 
-babi.hefesto.io/{dataDeNascimento}/semana
+localhost/{dataDeNascimento}/semana
 
 ```
 A data pode ser passada nos formatos:
@@ -63,10 +63,10 @@ Exemplo de retorno:
     }
 }
 ```
-[![run in postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/c54d50fe4db5ac0ebad1)
+[![run in postman](https://run.pstmn.io/button.svg)](https://www.getpostman.com/collections/f9e27539b258bfaedfe3)
 ## Quer ajudar?
 
-Para subir um servidor para desenvolvimento, basta executar os comandos:
+Para subir um servidor em localhost:80, basta executar os comandos:
 ```
 docker-compose build
 docker-compose up -d
